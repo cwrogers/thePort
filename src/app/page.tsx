@@ -1,9 +1,9 @@
-import Image from "next/image";
+import IntroductionPageComponent from "@/app/components/IntroductionPageComponent";
 
 export default function Home() {
-  return (
+    return (
     <main>
-      <h2>Hello world</h2>
+        <IntroductionPageComponent />
     </main>
   );
 }

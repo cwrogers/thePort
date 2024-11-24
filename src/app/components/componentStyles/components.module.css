@@ -1,4 +1,126 @@
+.headerArea {
+    padding:10px;
+    margin:30px;
+}
 
 .menu li {
     display: block;
+    color: var(--foregroundSecondary);
+    font-size: 1.2em;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.menu li:hover {
+    background: var(--foreground);
+    color: var(--background);
+}
+
+.headerImage {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border:0;
+    border-radius: 50%;
+}
+
+.headingTitle {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--foreground);
+}
+
+.headingSubtitle {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--foregroundSecondary);
+}
+
+.headerSmall {
+    font-size: 0.75em;
+    color: var(--foregroundSecondary);
+}
+
+.lastUpdated {
+    font-size: 0.75em;
+    color: var(--foregroundSecondary);
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+}
+
+.pageTitle {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--foreground);
+    margin: 20px;
+}
+
+.innerPageHeading {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--foreground);
+    margin: 20px;
+}
+
+.introPage {
+    margin:0;
+}
+
+.innerPage {
+    padding: 20px;
+    margin: 40px 0px 0px 20px;
+    top:40px;
+}
+
+.introText {
+    font-size: 1.2em;
+    color: var(--foreground);
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.techGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.techComp {
+    margin: 25px;
+}
+
+.techImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.techTitle {
+    font-size: .5em;
+    font-weight: bold;
+    width:50px;
+    text-align: center;
+    color: var(--foreground);
+    margin-top: 5px;
+}
+
+
+@media (max-width: 1100px) {
+
+}
+@media (max-width: 700px) {
+    .introHeading {
+        padding:0;
+        margin:0;
+    }
+    .innerPageHeading {
+        margin: 20px 0;
+    }
+    .innerPage {
+        margin: 0;
+    }
 }
