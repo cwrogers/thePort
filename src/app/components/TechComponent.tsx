@@ -5,7 +5,7 @@ const TechComponent = () => {
         <div className={styles.techComp}>
             <img
                 src="https://via.placeholder.com/100"
-                alt="Charles Rogers"
+                alt=""
                 className={styles.techImage}
             />
             <p className={styles.techTitle}>
