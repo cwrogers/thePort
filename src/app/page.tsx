@@ -1,6 +1,6 @@
 import IntroductionPageComponent from "@/app/components/IntroductionPageComponent";
-import WorkExpPageComponent from "./components/WorkExpPageComponent";
-import ProjectsPageComponent from "./components/ProjectsPageComponent";
+import WorkExpPageComponent from "./components/ExperiencePage/WorkExpPageComponent";
+import ProjectsPageComponent from "./components/ProjectsPage/ProjectsPageComponent";
 
 export default function Home() {
     return (

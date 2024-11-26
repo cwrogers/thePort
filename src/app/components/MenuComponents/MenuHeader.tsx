@@ -1,4 +1,4 @@
-import styles from './componentStyles/components.module.css';
+import styles from '../componentStyles/components.module.css';
 
 const MenuHeaderComponent = () => {
     return (

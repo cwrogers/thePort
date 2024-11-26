@@ -1,5 +1,5 @@
-import WorkExperience from "../models/WorkExperience"
-import style from './componentStyles/components.module.css'
+import WorkExperience from "../../models/WorkExperience"
+import style from '../componentStyles/components.module.css'
 
 interface expProps {
     exp: WorkExperience
@@ -11,11 +11,11 @@ const WorkExperienceComponent = ({exp} : expProps) => {
         <div className={style.workExp}>
             <div className={`${style.workExpHeading}`}> {exp.title} </div>
             <div className={style.expDate}> {exp.date} </div>
-            <div className={style.expDesc}> 
-                <p>
-                    {exp.description}
-                </p>
-            </div>
+            <ul className={style.expDesc}>
+                {exp.description.map((desc, index) => (
+                    <li key={index} className={style.workExpLi}>{desc}</li>
+                ))}
+            </ul>
         </div>
     );
 }

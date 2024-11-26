@@ -4,10 +4,10 @@ class WorkExperience {
   companyName: string;
   position: string;
   startDate: Date;
-  endDate?: Date;
-  description: string;
+  endDate: Date | null;
+  description: string[];
 
-  constructor(companyName: string, position: string, startDate: Date, endDate: Date, description: string) {
+  constructor(companyName: string, position: string, startDate: Date, endDate: Date | null, description: string[]) {
     this.companyName = companyName;
     this.position = position;
     this.startDate = startDate;
@@ -17,8 +17,8 @@ class WorkExperience {
 
   get date(): string {
       // Nov 2024,
-      let start = this.startDate.toLocaleDateString('default', { month: 'short', year: 'numeric' });
-      let end = this.endDate?.toLocaleDateString('default', { month: 'short', year: 'numeric' }) ?? 'Present';
+      const start = this.startDate.toLocaleDateString('default', { month: 'short', year: 'numeric' });
+      const end = this.endDate?.toLocaleDateString('default', { month: 'short', year: 'numeric' }) ?? 'Present';
       return `${start} - ${end}`;
   }
 
