@@ -2,8 +2,6 @@ import WorkExperience from "../../models/WorkExperience";
 import { PageTitle } from "../TextComponents";
 import WorkExperienceComponent from "./WorkExperienceComponent";
 import styles from '../componentStyles/components.module.css';
-import IPageProps from "@/app/components/IPageProps";
-
 
 const WorkExpPageComponent = () => {
 

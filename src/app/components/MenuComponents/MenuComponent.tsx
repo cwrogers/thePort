@@ -1,4 +1,3 @@
-'use client';
 import Link from "next/link";
 import styles from "../componentStyles/components.module.css";
 import MenuHeaderComponent from "@/app/components/MenuComponents/MenuHeader";
