@@ -111,6 +111,7 @@
 
 .workExp {
     margin: 20px;
+    max-width: 800px;
 }
 
 .workExpHeading {
@@ -179,5 +180,9 @@
 
     .techGrid {
         justify-content: space-between;
+    }
+
+    .workExp {
+        margin: 10px;
     }
 }
