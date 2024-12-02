@@ -54,4 +54,4 @@ jobs:
     needs: Pull
     steps:
       - name: Run Docker Container
-        run: docker run -d -p 9340:3000 --name ${{ secrets.IMAGE_NAME }} ${{ secrets.DOCKER_USERNAME }}/${{ secrets.REGISTRY_NAME }}:${{ secrets.IMAGE_NAME }}
+        run: docker run -d -p 9340:3000 --restart unless --name ${{ secrets.IMAGE_NAME }} ${{ secrets.DOCKER_USERNAME }}/${{ secrets.REGISTRY_NAME }}:${{ secrets.IMAGE_NAME }}

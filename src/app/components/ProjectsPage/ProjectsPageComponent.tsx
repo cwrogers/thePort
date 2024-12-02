@@ -2,6 +2,7 @@ import { PageTitle } from '../TextComponents';
 import styles from '../componentStyles/components.module.css'
 import ProjectModel from "@/app/models/ProjectModel";
 import ProjectComponent from "@/app/components/ProjectsPage/ProjectComponent";
+import InnerPage from "@/app/components/InnerPage";
 
 const ProjectsPageComponent = () => {
 
@@ -84,12 +85,12 @@ const ProjectsPageComponent = () => {
     ]
 
     return (
-        <div className={styles.innerPage}>
+        <InnerPage>
             <PageTitle title={"Projects"} />
             {projects.map((project, i) => (
                 <ProjectComponent project={project} key={i} />
             ))}
-        </div>
+        </InnerPage>
     );
 };
 

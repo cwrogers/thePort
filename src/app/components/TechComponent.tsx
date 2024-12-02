@@ -1,12 +1,15 @@
 import styles from "@/app/components/componentStyles/components.module.css";
+import Image from "next/image";
 
 const TechComponent = () => {
     return (
         <div className={styles.techComp}>
-            <img
-                src="https://via.placeholder.com/100"
+            <Image
+                src="globe.svg"
                 alt=""
                 className={styles.techImage}
+                width={100}
+                height={100}
             />
             <p className={styles.techTitle}>
                 React

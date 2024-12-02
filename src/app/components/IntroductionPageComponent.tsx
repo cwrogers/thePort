@@ -1,12 +1,22 @@
+"use client";
 import {PageTitle, InnerPageHeading} from "@/app/components/TextComponents";
 import styles from './componentStyles/components.module.css';
 import TechComponent from "@/app/components/TechComponent";
+import {motion} from "motion/react";
+import InnerPage from "@/app/components/InnerPage";
 
 
 const IntroductionPageComponent = () => {
+
+    const techArray = [];
+
+    for (let i = 0; i < 9; i++) {
+        techArray.push(<TechComponent key={i} />);
+    }
+
     return (
         <div className={styles.introPage}>
-            <div className={styles.innerPage}>
+            <InnerPage>
                 <PageTitle title={"Introduction"} />
                 <div className={styles.introText}>
                     <InnerPageHeading title={"About Me"} />
@@ -19,17 +29,20 @@ const IntroductionPageComponent = () => {
                 <div className={styles.introText}>
                     <InnerPageHeading title={"Technologies"} />
                     <div className={styles.techGrid}>
-                        <TechComponent />
-                        <TechComponent />
-                        <TechComponent />
-                        <TechComponent />
-                        <TechComponent />
-                        <TechComponent />
-                        <TechComponent />
-                        <TechComponent />
+                        {Array.apply(null, Array(9)).map((_, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, scale: 0 }}
+                                whileInView={{ opacity: 1, scale: 1}}
+                                transition={{ delay: i * 0.05, duration: 0.25, easing: "easeInOut" }}
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
+                                <TechComponent />
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
-            </div>
+            </InnerPage>
         </div>
     );
 }
