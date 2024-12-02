@@ -1,5 +1,4 @@
 import { PageTitle } from '../TextComponents';
-import styles from '../componentStyles/components.module.css'
 import ProjectModel from "@/app/models/ProjectModel";
 import ProjectComponent from "@/app/components/ProjectsPage/ProjectComponent";
 import InnerPage from "@/app/components/InnerPage";

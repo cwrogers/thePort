@@ -2,8 +2,6 @@
 import WorkExperience from "../../models/WorkExperience";
 import { PageTitle } from "../TextComponents";
 import WorkExperienceComponent from "./WorkExperienceComponent";
-import {motion} from "motion/react";
-import styles from '../componentStyles/components.module.css';
 import InnerPage from "@/app/components/InnerPage";
 
 const WorkExpPageComponent = () => {

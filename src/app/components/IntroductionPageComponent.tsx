@@ -29,15 +29,14 @@ const IntroductionPageComponent = () => {
                 <div className={styles.introText}>
                     <InnerPageHeading title={"Technologies"} />
                     <div className={styles.techGrid}>
-                        {Array.apply(null, Array(9)).map((_, i) => (
+                        {techArray.map((l, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, scale: 0 }}
-                                whileInView={{ opacity: 1, scale: 1}}
-                                transition={{ delay: i * 0.05, duration: 0.25, easing: "easeInOut" }}
-                                viewport={{ once: true, amount: 0.2 }}
+                                animate={{ opacity: 1, scale: 1}}
+                                transition={{ delay: i * 0.075, duration: 0.25, easing: "easeInOut" }}
                             >
-                                <TechComponent />
+                                {l}
                             </motion.div>
                         ))}
                     </div>
