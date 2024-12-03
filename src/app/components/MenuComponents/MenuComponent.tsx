@@ -4,6 +4,8 @@ import MenuHeaderComponent from "@/app/components/MenuComponents/MenuHeader";
 
 const MenuComponent = () => {
 
+    const buildDate = process.env.BUILD_DATE;
+
     return (
         <div className="menuComp">
             <MenuHeaderComponent/>
@@ -14,7 +16,7 @@ const MenuComponent = () => {
                 <Link href="/"><li>Blog</li></Link>
             </ul>
             <p className={styles.lastUpdated}>
-                Updated Nov 17, 2024
+                Updated {buildDate}
             </p>
         </div>
     );
