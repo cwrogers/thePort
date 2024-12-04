@@ -1,5 +1,6 @@
 import styles from '../componentStyles/components.module.css';
 import Image from "next/image";
+import IconLink from "@/app/components/MenuComponents/IconLink";
 
 const MenuHeaderComponent = () => {
     return (
@@ -12,8 +13,12 @@ const MenuHeaderComponent = () => {
                 height={100}
             />
             <h1 className={styles.headingTitle}>Charles Rogers</h1>
-            <h4 className={styles.headingSubtitle}>Software Engineer</h4>
+            <h2 className={styles.headingSubtitle}>Software Engineer</h2>
             <p className={styles.headerSmall}>Phoenix, AZ</p>
+            <div className={styles.menuIconLinks}>
+                <IconLink icon="linkedin" url="https://www.linkedin.com/in/cwrogers4/"/>
+                <IconLink icon="github" url="https://github.com/cwrogers"/>
+            </div>
         </div>
     );
 }

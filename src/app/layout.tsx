@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import {Metadata, Viewport} from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import MenuComponent from "./components/MenuComponents/MenuComponent";
@@ -18,8 +18,24 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Charles Rogers - Software Engineer",
   description: "Full Stack Software Engineer",
+  keywords: ["Software Engineer", "Full Stack", "React", "Next.js", "Developer", "Charles Rogers", "Phoenix, AZ", "Remote"],
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon.png",
+      type: "image/png",
+
+    },
+  ]
 };
 
+export const viewport : Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    minimumScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+}
 export default function RootLayout({children} : Readonly<{ children: React.ReactNode}>) {
 
   return (

@@ -10,10 +10,10 @@ const MenuComponent = () => {
         <div className="menuComp">
             <MenuHeaderComponent/>
             <ul className={styles.menu}>
-                <Link href="/"><li>Home</li></Link>
-                <Link href="/"><li>Resume</li></Link>
-                <Link href="/"><li>Contact</li></Link>
-                <Link href="/"><li>Blog</li></Link>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/">Resume</Link></li>
+                <li><Link href="/">Contact</Link></li>
+                <li><Link href="/">Blog</Link></li>
             </ul>
             <p className={styles.lastUpdated}>
                 Updated {buildDate}
