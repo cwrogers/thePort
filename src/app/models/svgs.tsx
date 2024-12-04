@@ -11,9 +11,6 @@ class BaseSvg implements JSX.Element {
 class TechSvg extends BaseSvg {
 }
 
-class SvgIcon extends BaseSvg {
-}
-
 const ReactSvg: TechSvg = (
     <svg fill="currentColor" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
          className={styles.techImage}>
