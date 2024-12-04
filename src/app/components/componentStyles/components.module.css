@@ -80,23 +80,37 @@
     color: var(--foreground);
     padding: 0 20px;
     max-width: 800px;
+    margin: 40px 0px;
 }
 
 .techGrid {
+    margin: 40px 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     justify-content: center;
     gap: 20px;
+}
+
+.techComp {
+    aspect-ratio: 1;
 }
 
 .techImage {
     width: 50px;
     height: 50px;
-    background: var(--foregroundSecondary);
-    border-radius: 50%;
     position:relative;
+    padding: 10px;
     left:50%;
+    color: var(--foreground);
     transform: translateX(-50%);
+}
+
+.techImage path {
+    fill: var(--foreground);
+}
+
+.techImage .techImageForeground {
+    fill: var(--background);
 }
 
 .techTitle {
