@@ -18,6 +18,24 @@
     color: var(--background);
 }
 
+.menuIconLinks {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.iconLink {
+    display: inline;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.iconLink svg {
+    width: 1.25rem;
+    height:1.25rem;
+}
+
 .headerImage {
     width: 100px;
     height: 100px;
@@ -109,8 +127,12 @@
     fill: var(--foreground);
 }
 
-.techImage .techImageForeground {
-    fill: var(--background);
+.techImageBackground{
+    fill: var(--foreground);
+}
+
+.techImageForeground {
+    fill: var(--background) !important;
 }
 
 .techTitle {
