@@ -1,20 +1,25 @@
+"use client"
 import styles from "@/app/components/componentStyles/components.module.css";
-import Image from "next/image";
+import {getSvg} from "@/app/models/svgs";
+import {motion} from "motion/react"
 
-const TechComponent = () => {
+interface ITechComponentProps {
+    tech: string;
+}
+
+const TechComponent = ({tech} : ITechComponentProps) => {
     return (
-        <div className={styles.techComp}>
-            <Image
-                src="globe.svg"
-                alt=""
-                className={styles.techImage}
-                width={100}
-                height={100}
-            />
+        <motion.div
+            initial={{scale: 1}}
+            whileHover={{scale: 1.1}}
+            className={styles.techComp}>
+
+            {getSvg(tech)}
+
             <p className={styles.techTitle}>
-                React
+                {tech}
             </p>
-        </div>
+        </motion.div>
     );
 }
 

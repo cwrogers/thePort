@@ -1,3 +1,4 @@
+"use client"
 import { PageTitle } from '../TextComponents';
 import ProjectModel from "@/app/models/ProjectModel";
 import ProjectComponent from "@/app/components/ProjectsPage/ProjectComponent";
