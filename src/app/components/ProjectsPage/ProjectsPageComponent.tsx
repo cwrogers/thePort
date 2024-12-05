@@ -53,7 +53,7 @@ const ProjectsPageComponent = () => {
             "https://via.placeholder.com/100",
         ),
         new ProjectModel(
-            "Web and Mobile(iOS) Chat Application",
+            "Web and Mobile (iOS) Chat Application",
             [
                 "Developed a real-time, messaging platform with support for group messages, replies and reactions with clients on\n" +
                 "both iOS and web."
