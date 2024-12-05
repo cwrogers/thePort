@@ -11,10 +11,12 @@ ENV NODE_ENV=production
 RUN npm run build
 
 FROM base as runner
+ARG CONTACT_EMAIL
 
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV EMAIL=$CONTACT_EMAIL
 
 RUN addgroup --system --gid 1001 nextjs
 RUN adduser --system  --uid 1001 --ingroup nextjs nextjs
