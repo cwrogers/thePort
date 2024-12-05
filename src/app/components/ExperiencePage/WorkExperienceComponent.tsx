@@ -8,7 +8,6 @@ interface expProps {
 }
 
 const WorkExperienceComponent = ({exp} : expProps) => {
-    //tailwind resume template
     return (
         <div className={style.workExp}>
             <motion.div

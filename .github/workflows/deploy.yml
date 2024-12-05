@@ -19,6 +19,7 @@ jobs:
         run: |
           docker build \
             -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.REGISTRY_NAME }}:${{ secrets.IMAGE_NAME }} \
+            --build-arg CONTACT_EMAIL=${{ secrets.CONTACT_EMAIL }} \
             -f Dockerfile .
 
       - name: Push Docker Image
