@@ -1,3 +1,8 @@
+
+.secondary {
+    color: var(--foregroundSecondary);
+}
+
 .headerArea {
     padding:10px;
     margin:30px;
@@ -23,6 +28,10 @@
     justify-content: left;
     margin-top: 10px;
     gap: 10px;
+}
+
+.menuIconLinks .techImageBackground {
+    fill: var(--foregroundSecondary);
 }
 
 .iconLink {
@@ -104,7 +113,7 @@
 .techGrid {
     margin: 40px 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     gap: 20px;
 }
@@ -177,6 +186,7 @@
 
 @media (max-width: 1100px) {
     .techGrid {
+        grid-template-columns: repeat(6, 1fr);
         justify-content: left;
     }
 
@@ -201,7 +211,15 @@
     }
 
 }
+
+@media (max-width: 800px) {
+}
+
 @media (max-width: 700px) {
+    .techGrid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 5px;
+    }
     .introHeading {
         padding:0;
         margin:0;

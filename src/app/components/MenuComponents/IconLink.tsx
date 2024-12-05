@@ -21,7 +21,7 @@ const IconLink = ({icon, url} : IIconLinkProps) => {
 
     return (
         <div>
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" title={icon}>
                 {svg}
             </a>
         </div>
