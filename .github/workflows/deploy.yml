@@ -55,4 +55,10 @@ jobs:
     needs: Pull
     steps:
       - name: Run Docker Container
-        run: docker run -d -p 9340:3000 --restart unless-stopped --name ${{ secrets.IMAGE_NAME }} ${{ secrets.DOCKER_USERNAME }}/${{ secrets.REGISTRY_NAME }}:${{ secrets.IMAGE_NAME }}
+        run: |
+          docker run -d \
+          -p 9340:3000 \
+          -v /tmp/resume.pdf:/tmp/resume.pdf \
+          --restart unless-stopped \
+          --name ${{ secrets.IMAGE_NAME }} \
+          ${{ secrets.DOCKER_USERNAME }}/${{ secrets.REGISTRY_NAME }}:${{ secrets.IMAGE_NAME }}

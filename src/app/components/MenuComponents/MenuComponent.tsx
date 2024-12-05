@@ -4,8 +4,8 @@ import MenuHeaderComponent from "@/app/components/MenuComponents/MenuHeader";
 
 const MenuComponent = () => {
 
-    const buildDate = process.env.NEXT_PUBLIC_BUILD_DATE;
-    const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+    const buildDate = process.env.BUILD_DATE;
+    const email = process.env.EMAIL;
 
     return (
         <div className="menuComp">
