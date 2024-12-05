@@ -89,7 +89,7 @@
     font-size: 1.5em;
     font-weight: bold;
     color: var(--foreground);
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .introPage {
@@ -115,10 +115,12 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
+    justify-items: center;
     gap: 20px;
 }
 
 .techComp {
+    max-width: 75px;
     aspect-ratio: 1;
 }
 
@@ -217,9 +219,9 @@
 
 @media (max-width: 700px) {
     .techGrid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
     }
+
     .introHeading {
         padding:0;
         margin:0;
@@ -231,11 +233,7 @@
         margin: 0;
     }
 
-    .techGrid {
-        justify-content: space-between;
-    }
-
     .workExp {
-        margin: 10px;
+        margin: 10px 10px 10px 20px;
     }
 }

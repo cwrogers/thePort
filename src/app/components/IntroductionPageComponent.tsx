@@ -42,6 +42,7 @@ const IntroductionPageComponent = () => {
                                 initial={{ opacity: 0, scale: 0 }}
                                 animate={{ opacity: 1, scale: 1}}
                                 transition={{ delay: i * 0.025, duration: 0.25, easing: "easeInOut" }}
+                                className={styles.techComp}
                             >
                                 {tech}
                             </motion.div>
