@@ -1,4 +1,5 @@
 FROM node:20-alpine AS base
+ARG CONTACT_EMAIL
 
 FROM base as builder
 WORKDIR /app
@@ -7,11 +8,14 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 
+RUN echo "EMAIL=$CONTACT_EMAIL" > .env
+RUN echo "BUILD_DATE=$(date +'%b %-d, %Y')" >> .env
+RUN echo "COMMIT_SHA=$(git rev-parse --short HEAD)" >> .env
+
 ENV NODE_ENV=production
 RUN npm run build
 
 FROM base as runner
-ARG CONTACT_EMAIL
 
 WORKDIR /app
 ENV NODE_ENV=production
