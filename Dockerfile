@@ -32,6 +32,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
+RUN echo "NEXT_PUBLIC_CONTACT_EMAIL=$CONTACT_EMAIL" > .env.local
 
 EXPOSE 3000
 ENV PORT=3000
