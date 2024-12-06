@@ -1,9 +1,10 @@
 import fs from 'fs/promises';
-import posthog from "posthog-js";
+import {captureEvent} from "@/app/providers";
+import {NextRequest} from "next/server";
 
-export async function GET() {
+export async function GET(req : NextRequest) {
     const resumeFile = await fs.readFile('/tmp/resume.pdf');
-    posthog.capture("Resume Downloaded");
+    captureEvent("resume_viewed", req.headers);
     return new Response(resumeFile, {
         status: 200,
     });
