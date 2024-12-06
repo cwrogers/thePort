@@ -15,6 +15,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
+      - name: "Setup Environment"
+        run: |
+          echo "REACT_APP_API_URL=http://localhost:3000" >> .env
+          echo "REACT_APP_API
+          echo "NEXT_PUBLIC_POSTHOG_KEY=${{ secrets.POSTHOG_KEY }}" >> .env
+          echo "NEXT_PUBLIC_POSTHOG_URL=${{ secrets.POSTHOG_URL }}" >> .env
+
       - name: "Install Dependencies"
         run: npm install
       - name: "Lint"
