@@ -20,6 +20,8 @@ jobs:
           docker build \
             -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.REGISTRY_NAME }}:${{ secrets.IMAGE_NAME }} \
             --build-arg CONTACT_EMAIL=${{ secrets.CONTACT_EMAIL }} \
+            --build-arg POSTHOG_KEY=${{ secrets.POSTHOG_KEY }} \
+            --build-arg POSTHOG_URL=${{ secrets.POSTHOG_URL }} \
             -f Dockerfile .
 
       - name: Push Docker Image
@@ -40,7 +42,6 @@ jobs:
       - name: Stop Docker Container
         run: |
           if [ $(docker ps -q --filter name=${{ secrets.IMAGE_NAME }}) ]; then
-              currentPort=$(docker inspect -f '{{range $p, $conf := .NetworkSettings.Ports}} {{$p}} {{end}}' ${{ secrets.IMAGE_NAME }} | awk '{print $1}' | awk -F'->' '{print $1}')
               docker stop ${{ secrets.IMAGE_NAME }}
               docker rm ${{ secrets.IMAGE_NAME }}
           fi
