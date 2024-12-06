@@ -11,9 +11,15 @@ process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "", {
 export async function GET(req : NextRequest) {
     const resumeFile = await fs.readFile('/tmp/resume.pdf');
 
+    const dateTime = new Date();
+    dateTime.setMinutes(0,0,0);
+
+    let distinctId = req.headers.get('X-Forwarded-For') ?? 'unknown';
+    distinctId += '_' + dateTime.toISOString();
+
     posthog.capture({
         event: 'resume_downloaded',
-        distinctId: req.headers.get('X-Forwarded-For') ?? 'unknown',
+        distinctId: distinctId
     })
 
     return new Response(resumeFile, {
